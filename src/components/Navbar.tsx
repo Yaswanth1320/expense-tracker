@@ -59,7 +59,7 @@ export default async function Navbar() {
             </Link>
             {user?.imageUrl && (
               <Image
-                src={user.imageUrl}
+                src={user.imageUrl || "./user.jpeg"}
                 alt={user.name || "User"}
                 width={28}
                 height={28}
