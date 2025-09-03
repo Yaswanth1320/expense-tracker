@@ -8,8 +8,6 @@ import {
   LogIn,
   TrendingUp,
   Loader2,
-  ArrowUpCircle,
-  ArrowDownCircle,
 } from "lucide-react";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { addTransactions } from "@/actions/addTransactions";
