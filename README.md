@@ -1,84 +1,174 @@
 # Expense Tracker
 
-This is a Next.js application for tracking personal expenses.
+<div align="center">
+  <div>
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="nextjs" />
+    <img src="https://img.shields.io/badge/-React-black?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-TailwindCSS-black?style=for-the-badge&logo=tailwindcss&logoColor=white&color=38BDF8" alt="tailwind" />
+    <img src="https://img.shields.io/badge/-Prisma-black?style=for-the-badge&logo=prisma&logoColor=white&color=2D3748" alt="prisma" />
+    <img src="https://img.shields.io/badge/-PostgreSQL-black?style=for-the-badge&logo=postgresql&logoColor=white&color=336791" alt="postgresql" />
+  </div>
+</div>
 
-## Tech Stack
+---
 
-- **Framework:** [Next.js](https://nextjs.org/)
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **ORM:** [Prisma](https://www.prisma.io/)
-- **Database:** [PostgreSQL](https://www.postgresql.org/) (or your preferred database with Prisma)
-- **Authentication:** [Kinde](https://kinde.com/)
-- **UI:**
-  - [Tailwind CSS](https://tailwindcss.com/)
-  - [Radix UI](https://www.radix-ui.com/)
-  - [Recharts](https://recharts.org/) for charts
-  - [Sonner](https://sonner.emilkowal.ski/) for notifications
-- **3D Visualization:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) & [Drei](https://github.com/pmndrs/drei)
+## 📋 Table of Contents
 
-## Getting Started
+1. 🎮 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🎯 [Features](#features)
+4. 🚀 [Quick Start](#quick-start)
+5. 📁 [Project Structure](#project-structure)
+6. 🔮 [Future Enhancements](#future-enhancements)
+7. 📄 [License](#license)
+8. 🙏 [Acknowledgements](#acknowledgements)
 
-### Prerequisites
+---
 
-- Node.js (v20 or higher)
-- npm
-- A PostgreSQL database (or other database compatible with Prisma)
+## 🎮 Introduction
 
-### Installation
+A modern, interactive expense tracker built with Next.js and TypeScript. Keep track of your income and expenses with a clean, intuitive interface.
 
-1. **Clone the repository:**
+This application allows users to log in, add transactions (both income and expenses), view their current balance, and see a history of their transactions.
 
-   ```bash
-   git clone <repository-url>
-   cd expense-tracker
-   ```
+---
 
-2. **Install dependencies:**
+## ⚙️ Tech Stack
 
-   ```bash
-   npm install
-   ```
+- **Framework:** Next.js 15 with React 19
+- **Language:** TypeScript
+- **ORM:** Prisma
+- **Database:** PostgreSQL
+- **Authentication:** Kinde
+- **Styling:** TailwindCSS with ShadCN UI components
+- **UI Components:** Radix UI
+- **Charts:** Recharts
+- **Notifications:** Sonner
+- **3D Visualization:** React Three Fiber & Drei
+- **Icons:** Lucide React
 
-3. **Set up environment variables:**
+---
 
-   Create a `.env.local` file in the root of the project and add the following variables:
+## 🎯 Features
 
-   ```
-   DATABASE_URL="your-database-url"
+- **User Authentication**
+  - Secure login and registration with Kinde.
+- **Transaction Management**
+  - Add new income or expense transactions.
+  - View a list of all transactions.
+- **Dashboard**
+  - View your current balance.
+  - See a visual representation of your finances.
+- **Modern UI/UX**
+  - Responsive design for all devices.
+  - Clean, intuitive interface.
+  - Toast notifications for user actions.
 
-   KINDE_CLIENT_ID="your-kinde-client-id"
-   KINDE_CLIENT_SECRET="your-kinde-client-secret"
-   KINDE_ISSUER_URL="your-kinde-issuer-url"
-   KINDE_SITE_URL="http://localhost:3000"
-   KINDE_POST_LOGOUT_REDIRECT_URL="http://localhost:3000"
-   KINDE_POST_LOGIN_REDIRECT_URL="http://localhost:3000/dashboard"
-   ```
+---
 
-   **Note:** You can get the Kinde credentials from your Kinde dashboard.
+## 🚀 Quick Start
 
-4. **Run database migrations:**
+### 🔧 Prerequisites
 
-   ```bash
-   npx prisma migrate dev
-   ```
+- Node.js (>=18.x recommended)
+- npm or yarn
+- Git
+- PostgreSQL
 
-5. **Run the development server:**
+### 📁 Clone the Repo
 
-   ```bash
-   npm run dev
-   ```
+```bash
+git clone <repository-url>
+cd expense-tracker
+```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 📦 Install Dependencies
 
-## Available Scripts
+```bash
+npm install
+# or
+yarn install
+```
 
-- `npm run dev`: Starts the development server with Turbopack.
-- `npm run build`: Creates a production build.
-- `npm run start`: Starts the production server.
-- `npm run lint`: Lints the codebase using ESLint.
+### ⚙️ Environment Variables
 
-## Deployment
+Create a `.env.local` file in the root of the project and add the following variables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+```
+DATABASE_URL="your-database-url"
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+KINDE_CLIENT_ID="your-kinde-client-id"
+KINDE_CLIENT_SECRET="your-kinde-client-secret"
+KINDE_ISSUER_URL="your-kinde-issuer-url"
+KINDE_SITE_URL="http://localhost:3000"
+KINDE_POST_LOGOUT_REDIRECT_URL="http://localhost:3000"
+KINDE_POST_LOGIN_REDIRECT_URL="http://localhost:3000/dashboard"
+```
+
+### 🏃 Run Migrations
+
+```bash
+npx prisma migrate dev
+```
+
+### ▶️ Run the App
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Visit 👉 http://localhost:3000
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                  # Next.js app directory
+│   ├── api/              # API routes
+│   │   ├── auth/         # Kinde auth routes
+│   │   └── balance/      # Balance API endpoint
+│   ├── dashboard/        # Dashboard page
+│   ├── create/           # Create transaction page
+│   └── page.tsx          # Landing page
+├── actions/              # Server actions
+│   ├── addTransactions.ts
+│   └── getTransactions.ts
+├── components/           # React components
+│   ├── Navbar.tsx
+│   ├── DashboardClient.tsx
+│   └── ui/               # ShadCN UI components
+├── lib/                  # Utility functions
+│   ├── db.ts             # Prisma client
+│   └── checkUser.ts
+└── prisma/               # Prisma schema and migrations
+```
+
+---
+
+## 🔮 Future Enhancements
+
+- Add more detailed charts and graphs for expense categorization.
+- Implement budget planning and tracking.
+- Add support for multiple currencies.
+- Create user profiles with customizable settings.
+- Add a mobile app.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙏 Acknowledgements
+
+- Built with Next.js and React.
+- UI components from ShadCN UI and Radix UI.
+- Authentication by Kinde.
+
